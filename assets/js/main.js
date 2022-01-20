@@ -40,6 +40,7 @@ function initAccordion() {
   }
 }
 
+<<<<<<< HEAD
 // Scroll Suave
 function initScrollSuave() {
   const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
@@ -96,3 +97,7 @@ initTabNav();
 initAccordion();
 initScrollSuave();
 initAnimacaoScroll();
+=======
+initTabNav();
+initAccordion();
+>>>>>>> parent of c409ec5 (feat: animacao ao scroll)
