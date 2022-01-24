@@ -161,37 +161,251 @@
 // Crie uma função construtora de Pessoas
 // Deve conter nome, sobrenome e idade
 // Crie um método no protótipo que retorne o nome completo da pessoa
-function Pessoa(nome, sobrenome, idade) {
-  this.nome = nome;
-  this.sobrenome = sobrenome;
-  this.idade = idade;
-}
+// function Pessoa(nome, sobrenome, idade) {
+//   this.nome = nome;
+//   this.sobrenome = sobrenome;
+//   this.idade = idade;
+// }
 
-Pessoa.prototype.nomeCompleto = function () {
-  return `${this.nome} ${this.sobrenome}`;
-};
+// Pessoa.prototype.nomeCompleto = function () {
+//   return `${this.nome} ${this.sobrenome}`;
+// };
 
-const pessoa_1 = new Pessoa("Anderson", "André", 22);
+// const pessoa_1 = new Pessoa("Anderson", "André", 22);
 
-console.log(pessoa_1.nomeCompleto());
+// console.log(pessoa_1.nomeCompleto());
 
-// Liste os métodos acessados por dados criados com NodeList, HTMLCollection, Document
-console.log(Object.getOwnPropertyNames(NodeList.prototype));
-console.log(Object.getOwnPropertyNames(HTMLCollection.prototype));
-console.log(Object.getOwnPropertyNames(Document.prototype));
+// // Liste os métodos acessados por dados criados com NodeList, HTMLCollection, Document
+// console.log(Object.getOwnPropertyNames(NodeList.prototype));
+// console.log(Object.getOwnPropertyNames(HTMLCollection.prototype));
+// console.log(Object.getOwnPropertyNames(Document.prototype));
 
-// Liste os construtores dos dados abaixo
-const li = document.querySelector("li");
+// // Liste os construtores dos dados abaixo
+// const li = document.querySelector("li");
 
-console.log(li.constructor.name); // HTMLLIElement
-console.log(li.click.constructor.name); // Function
-console.log(li.innerText.constructor.name); // String
-console.log(li.value.constructor.name); // Number
-console.log(li.hidden.constructor.name); // Boolean
-console.log(li.offsetLeft.constructor.name); // Number
-li.click(); // Undefined
+// console.log(li.constructor.name); // HTMLLIElement
+// console.log(li.click.constructor.name); // Function
+// console.log(li.innerText.constructor.name); // String
+// console.log(li.value.constructor.name); // Number
+// console.log(li.hidden.constructor.name); // Boolean
+// console.log(li.offsetLeft.constructor.name); // Number
+// li.click(); // Undefined
 
-// Qual é o contrutor do dado abaixo:
-console.log(li.hidden.constructor.name); // String
+// // Qual é o contrutor do dado abaixo:
+// console.log(li.hidden.constructor.name); // String
+
+// // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// // Native, Host e User -=-=-=-=-=-=-=
+// console.log(typeof Array.from !== "undefined");
+
+// if (typeof Array.from !== "undefined") {
+//   console.log("Existe");
+// } else {
+//   console.log("Não Existe");
+// }
+// // Exercícios
+// // Liste 5 objetos nativos
+// Object;
+// String;
+// Array;
+// Function;
+// Number;
+
+// // Liste 5 objetos do browser
+// Window;
+// History;
+// Document;
+// NodeList;
+// HTMLCollection;
+
+// // Liste 2 métodos, propriedades ou objetos presentes no Chrome que não existem no Firefox
+// if (typeof window.PaymentRequest !== "undefined") {
+//   console.log("Existe");
+// } else {
+//   console.log("Não Existe");
+// }
+
+// document.ontouchstart;
+// window.PaymentRequest;
+
+// // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// // String -=-=-=-=-=-=-=-=-=-=-=-=-=-
+// const comida = "Pizza";
+// const bebida = new String("Coca-Cola");
+// const ano = new String(2022);
+// const frase = "A melhor comida";
+
+// console.log(comida.length);
+// console.log(bebida.length);
+
+// console.log(comida[0]);
+// console.log(bebida[0]);
+// console.log(frase[frase.length - 1]); // Última letra
+
+// const linguagem = "JavaScript";
+
+// console.log(linguagem.charAt(0));
+// console.log(linguagem.charAt(linguagem.length - 1));
+
+// const fraseFinal = frase + " é " + comida;
+// // const fraseFinal = frase.concat(comida)
+// console.log(fraseFinal);
+
+// const fruta = "Banana";
+// const listaFrutas = "Melancia, Banana, Laranja";
+// console.log(listaFrutas.includes(fruta));
+// console.log(fruta.includes(listaFrutas));
+
+// console.log(fruta.endsWith("nana"));
+// console.log(fruta.startsWith("Ba"));
+// console.log(fruta.startsWith("na"));
+
+// const transacao_1 = "Depósito de cliente";
+// const transacao_2 = "Depósito de fornecedor";
+// const transacao_3 = "Taxa de camisas";
+
+// console.log(transacao_1.slice(0, 3));
+// console.log(transacao_2.slice(0, 3));
+// console.log(transacao_3.slice(0, 3));
+
+// console.log(transacao_1.slice(12));
+// console.log(transacao_2.slice(-4));
+// console.log(transacao_3.slice(3, 6));
+
+// const animal = "Cachorro";
+// console.log(animal.substring(3, 5));
+// console.log(animal.substring(0, 4));
+// console.log(animal.substring(4));
+// console.log(animal.substring(-3)); // não funciona com valores negativos
+
+// const instrumento = "Guitarra";
+
+// console.log(instrumento.indexOf("r"));
+// console.log(instrumento.lastIndexOf("r"));
+// console.log(instrumento.indexOf("ta"));
+
+// const listaPreco = ["R$ 99", "R$ 199", "R$ 12000"];
+// listaPreco.forEach((preco) => {
+//   console.log(preco.padStart(10, "."));
+// });
+
+// console.log(listaPreco[0].padStart(10, "."));
+// console.log(listaPreco[0].padEnd(10, "."));
+
+// const repetir = "Ta";
+// console.log(repetir.repeat(5));
+
+// let listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
+// listaItens = listaItens.replace(/[ ]+/g, ", ");
+// console.log(listaItens);
+
+// let preco = "R$ 1200,43";
+// preco = preco.replace(",", ".");
+// console.log(preco);
+
+// const arrayItens = listaItens.split(", ");
+// console.log(arrayItens);
+
+// const htmlText = "<div>O melhor item</div><div>A melhor lista</div>";
+// const htmlArray = htmlText.split("div");
+// const htmlNovo = htmlArray.join("section");
+// console.log(htmlArray);
+// console.log(htmlNovo);
+
+// const sexo_1 = "Feminino";
+// const sexo_2 = "feminino";
+// const sexo_3 = "FEMININO";
+
+// console.log(sexo_1.toLowerCase() === "feminino");
+// console.log(sexo_2.toLowerCase() === "feminino");
+// console.log(sexo_3.toLowerCase() === "feminino");
+
+// const valor = "  R$ 23.00  ";
+// console.log(valor.trim());
+// console.log(valor.trimStart());
+// console.log(valor.trimEnd());
+
+// // Exercício
+// // Utilizando o forEach no array abaixo, some os valores de Taxa e os valores de Recebimento
+// const transacoes = [
+//   {
+//     descricao: "Taxa do Pão",
+//     valor: "R$ 39",
+//   },
+//   {
+//     descricao: "Taxa do Mercado",
+//     valor: "R$ 129",
+//   },
+//   {
+//     descricao: "Recebimento de Cliente",
+//     valor: "R$ 99",
+//   },
+//   {
+//     descricao: "Taxa do Banco",
+//     valor: "R$ 129",
+//   },
+//   {
+//     descricao: "Recebimento de Cliente",
+//     valor: "R$ 49",
+//   },
+// ];
+
+// // Resposta
+// let taxaTotal = 0;
+// let recebimentoTotal = 0;
+
+// transacoes.forEach((item) => {
+//   const numeroLimpo = +item.valor.replace("R$ ", "");
+//   if (item.descricao.slice(0, 4) === "Taxa") {
+//     taxaTotal += numeroLimpo;
+//   } else {
+//     recebimentoTotal += numeroLimpo;
+//   }
+// });
+// console.log(taxaTotal);
+// console.log(recebimentoTotal);
+
+// // Retorne um array com a lista abaixo
+// const transportes = "Carro;Avião;Trem;Ônibus;Bicicleta";
+
+// const arrayTransportes = transportes.split(";");
+// console.log(arrayTransportes);
+
+// // Substitua todos os span's por a's
+// let html = `<ul>
+//                 <li><span>Sobre</span></li>
+//                 <li><span>Produtos</span></li>
+//                 <li><span>Contato</span></li>
+//               </ul>`;
+
+// html = html.split("span").join("a");
+// console.log(html);
+
+// // Retorne o último caracter da frase
+// const frase = "Melhor do ano!";
+// console.log(frase[frase.length - 1]);
+// console.log(frase.slice(-1));
+
+// // Retorne o total de taxas
+// const transacoes_2 = [
+//   "Taxa de Banco",
+//   "   TAXA DO PÃO",
+//   "  taxa do mercado",
+//   "depósito bancário",
+//   "TARIFA especial",
+// ];
+
+// let taxasTotal = 0;
+
+// transacoes_2.forEach((item) => {
+//   item = item.toLowerCase().trim().slice(0, 4);
+//   if (item === "taxa") {
+//     taxasTotal++;
+//   }
+// });
+
+// console.log(taxasTotal);
 
 // // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
