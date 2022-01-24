@@ -6,25 +6,17 @@
    Landing Page desenvolvida durante o curso de JavaScript da Origamid. O objetivo desse projeto foi aprender a selecionar, manipular a DOM e utilizar eventos.
 </h2>
 
-</br>
-
 <h3 align="center">
 No projeto eu pude aprender a criar uma navegação com Tabs, criar um Accordion List, criar um Scroll Suave e a fazer animações ao Scroll.
 </h3>
-
-</br>
 
 <h1 align="center">Demonstração</h1>
 
 ![Demonstração do site](/Demo.png)
 
-</br>
-
 ## 🐯 Technologies
 
 As tecnologias utilizadas foram: HTML, CSS e JavaScript.
-
-</br>
 
 ## 🐿 Features
 
@@ -37,8 +29,6 @@ As tecnologias utilizadas foram: HTML, CSS e JavaScript.
 - [x] Scroll Suave
 - [x] Animações ao Scroll
 - [x] Navegação com tabs
-
-</br>
 
 ## 🦞 Getting started
 
@@ -53,8 +43,6 @@ _O website funciona em qualquer navegador moderno_
 Se você quiser baixar o repositório no seu computador digite o comand abaixo em um terminal
 
 `git clone git@github.com:Anderson-Andre-P/animais-fantasticos.git`
-
-</br>
 
 ## 🐇 Autor
 
