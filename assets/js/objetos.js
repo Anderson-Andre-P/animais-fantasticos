@@ -409,3 +409,90 @@
 // console.log(taxasTotal);
 
 // // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// // Number -=-=-=-=-=-=-=-=-=-=-=-=-=-
+// console.log(Number.isNaN(NaN)); // true
+// console.log(Number.isNaN(5)); // false
+// console.log(Number.isNaN("5")); // false
+
+// console.log(Number.isInteger(20)); // true
+// console.log(Number.isInteger(20.6)); // false
+
+// console.log(parseFloat("99.5"));
+// console.log(Number.parseFloat("99.5"));
+// console.log(Number.parseFloat("100 Reais"));
+// console.log(Number.parseFloat("R$ 100"));
+
+// console.log(parseInt("99.5", 10));
+// console.log(parseInt(5.6656565, 10));
+// console.log(parseInt("100 Reais", 10));
+
+// const preco = 2.99;
+// console.log(preco.toFixed());
+
+// const carro = 1000.455;
+// console.log(carro.toFixed(2));
+
+// const preco_2 = 1499.49;
+// console.log(preco_2.toFixed());
+
+// console.log(preco.toString(10));
+
+// console.log(
+//   preco.toLocaleString("en-US", { style: "currency", currency: "USD" })
+// );
+// console.log(
+//   preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+// );
+
+// console.log(Math.PI);
+// console.log(Math.E);
+// console.log(Math.LN10);
+
+// console.log(Math.abs(-3));
+// console.log(Math.ceil(4.8334));
+// console.log(Math.ceil(4.3));
+// console.log(Math.floor(4.8334));
+// console.log(Math.floor(4.3));
+// console.log(Math.round(4.8334));
+// console.log(Math.round(4.3));
+
+// console.log(Math.max(5, 55, 555, 6));
+// console.log(Math.min(5, 55, 555, 6));
+
+// console.log(Math.random());
+// console.log(Math.floor(Math.random() * 100));
+// console.log(Math.floor(Math.random() * 500));
+
+// console.log(Math.floor(Math.random() * (72 - 32 + 1)) + 32); // numero entre 72 e 32
+
+// // Exercícios
+// // // Retorne um número aleatório entre 1050 e 2000
+// const min = 1050;
+// const max = 2000;
+// console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+
+// // // Retone o maior número da lista abaixo
+// const numeros = "4, 5, 20, 8, 9";
+// const arrayNumeros = numeros.split(", ");
+// const maiorNumero = Math.max(...arrayNumeros);
+// console.log(maiorNumero);
+
+// // // Crie uma função para limpar os preços e retornar os números com centavos arredondados, depois retorne a soma total
+// const listaPreco = ["R$ 59.99", "R$ 100,222", "R$ 230", "r$ 200"];
+
+// function limparPreco(preco) {
+//   preco = +preco.toUpperCase().replace("R$", "").trim().replace(",", ".");
+//   preco = +preco.toFixed(2);
+//   return preco;
+// }
+
+// let soma = 0;
+// listaPreco.forEach((preco) => {
+//   soma += limparPreco(preco);
+// });
+
+// console.log(
+//   soma.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+// );
+
+// // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
