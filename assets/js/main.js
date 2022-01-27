@@ -2,12 +2,13 @@ import initScrollSuave from "./modules/scrollSuave.js";
 import initAnimacaoScroll from "./modules/animarScroll.js";
 import initAccordion from "./modules/accordionList.js";
 import initTabNav from "./modules/tabNav.js";
+import initModal from "./modules/modal.js";
 
 initTabNav();
 initAccordion();
 initScrollSuave();
 initAnimacaoScroll();
-
+initModal();
 // Navegação por Tab
 // function initTabNav() {
 //   const tabMenu = document.querySelectorAll("[data-tab='menu'] li");
